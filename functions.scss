@@ -1,0 +1,10 @@
+@function rem-convert($number: 16) {
+    @if type-of ($number) ==  number {
+        $number: calc($number/16) + rem;
+        @return $number;
+    }
+    @else {
+        @error "Only type number !";
+    }
+
+}
